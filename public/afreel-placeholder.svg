@@ -1,0 +1,6 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#ffffff" />
+  <rect width="800" height="600" stroke="#e2e8f0" stroke-width="2" fill="none" />
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="40" fill="#0f172a">Afreel</text>
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="20" fill="#64748b">Replace with screenshot: public/afreel.png</text>
+</svg>

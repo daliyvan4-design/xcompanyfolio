@@ -29,7 +29,13 @@ export async function POST(request: Request) {
     }
 
     if (action === 'subscribe') {
-        await addSubscriber(payload);
+        console.log('New subscriber:', payload);
+        try {
+            await addSubscriber(payload);
+        } catch (error) {
+            console.error('Failed to save subscriber to file:', error);
+            // Don't fail the request, just log it so we have the data
+        }
         return NextResponse.json({ success: true });
     }
 

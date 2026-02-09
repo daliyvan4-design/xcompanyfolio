@@ -128,9 +128,9 @@ export default function AdminDashboard() {
                             <tbody className="divide-y divide-neutral-800 text-neutral-300 text-sm font-mono">
                                 {subscribers.map((sub, i) => (
                                     <tr key={i} className="hover:bg-neutral-900/50">
-                                        <td className="p-4 font-sans">{sub.name}</td>
-                                        <td className="p-4">{sub.phone}</td>
-                                        <td className="p-4">{sub.email}</td>
+                                        <td className="p-4 font-sans">{sub.name || '-'}</td>
+                                        <td className="p-4">{sub.phone || '-'}</td>
+                                        <td className="p-4">{sub.email || '-'}</td>
                                         <td className="p-4">{new Date(sub.date).toLocaleDateString()} {new Date(sub.date).toLocaleTimeString()}</td>
                                     </tr>
                                 ))}

@@ -24,7 +24,7 @@ export default function AiToolsPage() {
                     id: "digiprotech",
                     name: t.ai.items.digiprotech.name,
                     description: t.ai.items.digiprotech.description,
-                    image: "/digiprotech.png?v=final",
+                    image: "/digiprotech_v2.png",
                     link: "https://chatgpt.com/g/g-6810e341e3f481918f4a84150b16faf9-digiprotec-ivoire",
                     cta: t.ai.items.digiprotech.cta
                 },
@@ -32,7 +32,7 @@ export default function AiToolsPage() {
                     id: "memoire_boss",
                     name: t.ai.items.memoire_boss.name,
                     description: t.ai.items.memoire_boss.description,
-                    image: "/memoire_boss.png?v=final",
+                    image: "/memoire_boss_v2.png",
                     link: "https://chatgpt.com/g/g-680f698504ec819186aaf3aa1201c7eb-memoire-boss",
                     cta: t.ai.items.memoire_boss.cta
                 },
@@ -48,7 +48,7 @@ export default function AiToolsPage() {
                     id: "flowbuilder",
                     name: t.ai.items.flowbuilder.name,
                     description: t.ai.items.flowbuilder.description,
-                    image: "/flowbuilder.png?v=final",
+                    image: "/flowbuilder_v2.png",
                     link: "https://chatgpt.com/g/g-6819ebd819708191b99c0c4a672683ae-flowbuildergpt",
                     cta: t.ai.items.flowbuilder.cta
                 },

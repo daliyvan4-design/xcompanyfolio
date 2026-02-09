@@ -59,7 +59,7 @@ export default function AboutPage() {
                         <img
                             src="/about_me.jpg"
                             alt="About Me"
-                            className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                            className="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                         />
                     </div>
                 </motion.div>

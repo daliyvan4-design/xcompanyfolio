@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Xcompany Work — Bob-Yvan Dali",
   description: "Websites and applications designed to answer a need and make access effortless. Digital products that solve real problems.",
   icons: {
-    icon: "/icon.png",
+    icon: "/IMG_7560.png",
   },
 };
 

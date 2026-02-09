@@ -119,9 +119,10 @@ export default function WorkPage() {
                             layout
                             key={project.id}
                             initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95 }}
-                            transition={{ duration: 0.3 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
                             className="group cursor-pointer block"
                         >
                             {/* Direct External Link */}

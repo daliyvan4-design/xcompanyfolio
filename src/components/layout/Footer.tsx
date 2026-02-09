@@ -48,7 +48,7 @@ export function Footer() {
             setName("");
             setPhone("");
             setEmail("");
-            setTimeout(() => setStatus("idle"), 3000);
+            setTimeout(() => setStatus("idle"), 5000);
         } catch (err) {
             setStatus("error");
         }
@@ -69,41 +69,74 @@ export function Footer() {
             {/* Minimalist Newsletter */}
             <div className="w-full max-w-md">
                 <p className="text-white font-display text-lg mb-4">{t.newsletter.title}</p>
-                <form onSubmit={handleSubscribe} className="flex flex-col gap-3">
-                    <input
-                        type="text"
-                        placeholder={t.newsletter.name}
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="bg-neutral-900 border border-neutral-800 text-white px-4 py-2 rounded focus:outline-none focus:border-white transition-colors font-sans"
-                        required
-                    />
-                    <input
-                        type="email"
-                        placeholder={t.newsletter.email}
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="bg-neutral-900 border border-neutral-800 text-white px-4 py-2 rounded focus:outline-none focus:border-white transition-colors font-sans"
-                        required
-                    />
-                    <div className="flex gap-2">
-                        <input
-                            type="tel"
-                            placeholder={t.newsletter.phone}
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            className="bg-neutral-900 border border-neutral-800 text-white px-4 py-2 rounded focus:outline-none focus:border-white transition-colors flex-grow font-mono"
-                            required
-                        />
-                        <button
-                            type="submit"
-                            disabled={status === "loading" || status === "success"}
-                            className="bg-white text-black px-4 py-2 rounded font-medium hover:bg-neutral-200 transition-colors disabled:opacity-50 whitespace-nowrap"
-                        >
-                            {status === "loading" ? "..." : status === "success" ? "✓" : t.newsletter.button}
-                        </button>
-                    </div>
-                </form>
+                <div className="h-48 flex items-center">
+                    <AnimatePresence mode="wait">
+                        {status === "success" ? (
+                            <motion.div
+                                key="success"
+                                initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
+                                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                                exit={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+                                transition={{ duration: 0.8, ease: "circOut" }}
+                                className="w-full text-center"
+                            >
+                                <p className="text-xl md:text-2xl font-display text-white mb-2">
+                                    Bienvenue dans le réseau
+                                </p>
+                                <motion.div
+                                    initial={{ width: 0 }}
+                                    animate={{ width: "100%" }}
+                                    transition={{ delay: 0.5, duration: 0.8 }}
+                                    className="h-px bg-gradient-to-r from-transparent via-white to-transparent mx-auto opacity-50"
+                                />
+                            </motion.div>
+                        ) : (
+                            <motion.form
+                                key="form"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0, filter: "blur(5px)" }}
+                                transition={{ duration: 0.3 }}
+                                onSubmit={handleSubscribe}
+                                className="flex flex-col gap-3 w-full"
+                            >
+                                <input
+                                    type="text"
+                                    placeholder={t.newsletter.name}
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    className="bg-neutral-900 border border-neutral-800 text-white px-4 py-2 rounded focus:outline-none focus:border-white transition-colors font-sans"
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    placeholder={t.newsletter.email}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    className="bg-neutral-900 border border-neutral-800 text-white px-4 py-2 rounded focus:outline-none focus:border-white transition-colors font-sans"
+                                    required
+                                />
+                                <div className="flex gap-2">
+                                    <input
+                                        type="tel"
+                                        placeholder={t.newsletter.phone}
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
+                                        className="bg-neutral-900 border border-neutral-800 text-white px-4 py-2 rounded focus:outline-none focus:border-white transition-colors flex-grow font-mono"
+                                        required
+                                    />
+                                    <button
+                                        type="submit"
+                                        disabled={status === "loading"}
+                                        className="bg-white text-black px-4 py-2 rounded font-medium hover:bg-neutral-200 transition-colors disabled:opacity-50 whitespace-nowrap"
+                                    >
+                                        {status === "loading" ? "..." : t.newsletter.button}
+                                    </button>
+                                </div>
+                            </motion.form>
+                        )}
+                    </AnimatePresence>
+                </div>
             </div>
 
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">

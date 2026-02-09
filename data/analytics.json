@@ -1,11 +1,12 @@
 {
-    "visits": 142,
-    "clicks": {
-        "email": 12,
-        "phone": 5,
-        "whatsapp": 8,
-        "snapchat": 15,
-        "twitter": 3,
-        "github": 7
-    }
+  "visits": 142,
+  "clicks": {
+    "email": 12,
+    "phone": 5,
+    "whatsapp": 8,
+    "snapchat": 15,
+    "twitter": 3,
+    "github": 7,
+    "snapchat_copy": 1
+  }
 }

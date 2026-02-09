@@ -67,7 +67,7 @@ export default function WorkPage() {
             description: t.work.items.gpts.description,
             slug: "gpts",
             url: "/ai",
-            image: "/gpts-category.png"
+            image: "/gpts-category_v2.png"
         },
         {
             id: 10,
@@ -76,7 +76,7 @@ export default function WorkPage() {
             description: t.work.items.books.description,
             slug: "books",
             url: "/ai",
-            image: "/books-category.png"
+            image: "/books-category_v2.png"
         }
     ];
 

@@ -55,20 +55,12 @@ export default function AboutPage() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="aspect-[3/4] w-full bg-neutral-900/30 rounded-lg border border-neutral-800 flex items-center justify-center relative overflow-hidden group hover:border-neutral-700 transition-colors"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none" />
-
-                    {/* Minimalist Upload Placeholder / Animation */}
-                    <div className="flex flex-col items-center gap-4 text-neutral-600 group-hover:text-neutral-500 transition-colors">
-                        <motion.div
-                            animate={{ y: [0, -5, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                        >
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-50">
-                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" strokeWidth="1" />
-                                <circle cx="12" cy="12" r="3" fill="currentColor" className="opacity-20" />
-                            </svg>
-                        </motion.div>
-                        <span className="font-mono text-xs uppercase tracking-widest opacity-60">Photo Slot</span>
+                    <div className="relative w-full h-full">
+                        <img
+                            src="/about_me.jpg"
+                            alt="About Me"
+                            className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                        />
                     </div>
                 </motion.div>
             </div>
